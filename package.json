@@ -1,0 +1,41 @@
+{
+    "name": "customed-bcrypt",
+    "version": "1.0.0",
+    "description": "Custom bcrypt",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/nqnghia285/customed-bcrypt.git"
+    },
+    "author": "nqnghia285",
+    "license": "MIT",
+    "private": false,
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "tsc",
+        "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+        "lint": "tslint -P tsconfig.json",
+        "prepare": "yarn build",
+        "preversion": "yarn lint",
+        "version": "yarn format && git add -A src",
+        "postversion": "git push && git push --tags",
+        "git": "git add -A && git commit -m \"Setup Package\" && git push",
+        "publish": "git add . && git commit -m \"update\" && git push"
+    },
+    "homepage": "https://github.com/nqnghia285/customed-bcrypt.git#readme",
+    "keywords": [
+        "comparePWD",
+        "customed-bcrypt",
+        "hashPWD"
+    ],
+    "files": [
+        "dist"
+    ],
+    "dependencies": {
+        "bcrypt": "^5.0.1"
+    },
+    "devDependencies": {
+        "@types/bcrypt": "^3.0.1"
+    }
+}
