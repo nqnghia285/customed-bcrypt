@@ -1,6 +1,3 @@
-/// <reference path="./index.ts" />
-/// <reference types="bcrypt" />
-
 /**
  * @method comparePWD: Compare password vs hash code
  * @param pwd
