@@ -1,6 +1,6 @@
 {
     "name": "customed-bcrypt",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Custom bcrypt",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
@@ -32,9 +32,7 @@
         "dist"
     ],
     "dependencies": {
+        "@types/bcrypt": "^3.0.1",
         "bcrypt": "^5.0.1"
-    },
-    "devDependencies": {
-        "@types/bcrypt": "^3.0.1"
     }
 }
