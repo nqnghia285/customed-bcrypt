@@ -1,6 +1,6 @@
 {
     "name": "customed-bcrypt",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "description": "Custom bcrypt",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
