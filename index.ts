@@ -1,17 +1,16 @@
 import { compareSync, genSaltSync, hashSync } from "bcrypt";
 
 /**
- * @method comparePWD: Compare password vs hash code
- * @param pwd
- * @param hash
+ * @method comparePWD Compare password vs hash code
+ * @param pwd any
+ * @param hash any
  * @returns boolean
  */
-export function comparePWD(pwd: string | undefined, hash: any): boolean {
+export function comparePWD(pwd: any, hash: any): boolean {
     try {
         return compareSync(pwd, hash);
     } catch (error) {
-        console.log(error);
-        return false;
+        throw Error(error);
     }
 }
 
@@ -21,11 +20,10 @@ export function comparePWD(pwd: string | undefined, hash: any): boolean {
  * @param salt
  * @returns string
  */
-export function hashPWD(pwd: string | undefined, salt: string = genSaltSync()): string | undefined {
+export function hashPWD(pwd: any, salt: string | number = genSaltSync()): string {
     try {
         return hashSync(pwd, salt);
     } catch (error) {
-        console.log(error);
-        return undefined;
+        throw Error(error);
     }
 }

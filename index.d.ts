@@ -1,10 +1,10 @@
 /**
- * @method comparePWD: Compare password vs hash code
- * @param pwd
- * @param hash
+ * @method comparePWD Compare password vs hash code
+ * @param pwd any
+ * @param hash any
  * @returns boolean
  */
-export declare function comparePWD(pwd: string | undefined, hash: any): boolean;
+export function comparePWD(pwd: any, hash: any): boolean;
 
 /**
  * @method hashPWD: Hash password
@@ -12,4 +12,4 @@ export declare function comparePWD(pwd: string | undefined, hash: any): boolean;
  * @param salt
  * @returns string
  */
-export declare function hashPWD(pwd: string | undefined, salt?: string): string | undefined;
+export function hashPWD(pwd: any, salt: string | number): string;
