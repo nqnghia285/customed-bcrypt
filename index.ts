@@ -10,7 +10,8 @@ export function comparePWD(pwd: any, hash: any): boolean {
     try {
         return compareSync(pwd, hash);
     } catch (error) {
-        throw Error(error);
+        console.log("Error: ", error);
+        return false;
     }
 }
 
@@ -18,12 +19,13 @@ export function comparePWD(pwd: any, hash: any): boolean {
  * @method hashPWD: Hash password
  * @param pwd
  * @param salt
- * @returns string
+ * @returns string | undefined
  */
-export function hashPWD(pwd: any, salt: string | number = genSaltSync()): string {
+export function hashPWD(pwd: any, salt: string | number = genSaltSync()): string | undefined {
     try {
         return hashSync(pwd, salt);
     } catch (error) {
-        throw Error(error);
+        console.log("Error: ", error);
+        return undefined;
     }
 }

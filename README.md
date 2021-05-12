@@ -17,7 +17,7 @@ function comparePWD(pwd: any, hash: any): boolean;
  * @method hashPWD: Hash password
  * @param pwd
  * @param salt
- * @returns string
+ * @returns string | undefined
  */
-function hashPWD(pwd: any, salt: string | number = genSaltSync()): string;
+function hashPWD(pwd: any, salt: string | number = genSaltSync()): string | undefined;
 ```
